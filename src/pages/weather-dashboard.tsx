@@ -67,16 +67,13 @@ const WeatherDashboard = () => {
 
   const locationName = locationQuery.data?.[0];
 
-  if (weatherQuery.error || forecastQuery.error) {
-  console.error('Weather Query Error:', weatherQuery.error);
-  console.error('Forecast Query Error:', forecastQuery.error);
-  const errorMessage = weatherQuery.error?.message || forecastQuery.error?.message || 'Failed to fetch weather data. Please try again.';
+  if (weatherQuery.error || forecastQuery.error) {  
   return (
     <Alert variant="destructive">
       <AlertTriangle className='h-4 w-4' />
       <AlertTitle>Error</AlertTitle>
       <AlertDescription className='flex flex-col gap-4'>
-        <p>{errorMessage}</p>
+        <p>Failed to fetch weather data. Please try again.</p>
         <Button onClick={handleRefresh} variant={"outline"} className='w-fit'>
           <RefreshCw className='mr-2 h-4 w-4' />
           Retry
@@ -92,7 +89,6 @@ const WeatherDashboard = () => {
 
   return (
   <div className='space-y-4 p-4'>
-    {/* Favorite Cities */}
     <div className='flex items-center justify-between'>
       <h1 className='text-x1 font-bold tracking-tight'>My Location</h1>
       <Button
