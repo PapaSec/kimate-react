@@ -2,7 +2,7 @@
 The Kimate Weather App is a sleek and responsive weather application built using React 19 and TypeScript. It fetches real-time weather data from a public Weather API and displays forecasts in a clean, modern interface.
 
 🔍 Features:
-📍 Search by City to view current weather
+📍 Search by City to view current weather and also add your favorites city to display in the dashboard
 
 🌡️ Displays temperature, conditions, humidity, and wind
 
